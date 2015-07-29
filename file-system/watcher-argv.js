@@ -5,8 +5,8 @@ if (!filename) {
   throw Error("A file to watch must be specified!");
 }
 
-fs.watch('target.txt', function() {
+fs.watch(filename, function() {
   console.log("File " + filename + " just changed!");
 });
 
-console.log("Now watching target.txt for changes...");
+console.log("Now watching " + filename + " for changes...");
